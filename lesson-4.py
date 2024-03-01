@@ -1,5 +1,6 @@
-
 import math, random
+
+
 def test_greeting():
     """
     Напишите программу, которая выводит на экран приветствие.
@@ -21,7 +22,7 @@ def test_rectangle():
     a = 10
     b = 20
     # TODO сосчитайте периметр
-    perimeter = a * 2 + b * 2
+    perimeter = (a + b) * 2
 
     assert perimeter == 60
 
@@ -53,7 +54,7 @@ def test_random_list():
     Создайте список из 10 случайных чисел от 1 до 100 (включая обе границы) и отсортируйте его по возрастанию.
     """
     # TODO создайте список
-    l = sorted([random.randint(1, 101) for _ in range(10)])
+    l = sorted([random.randint(1, 100) for _ in range(10)])
 
     assert len(l) == 10
     assert all(l[i] <= l[i + 1] for i in range(len(l) - 1))
